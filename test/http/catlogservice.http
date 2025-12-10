@@ -1,0 +1,42 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Orders
+# @name Orders_GET
+GET {{server}}/odata/v4/catlogservice/Orders
+Authorization: Basic {{username}}:{{password}}
+
+
+### Orders
+# @name Orders_POST
+POST {{server}}/odata/v4/catlogservice/Orders
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 14382863,
+  "item": "item-14382863",
+  "qty": 57
+}
+
+
+### Orders
+# @name Orders_PATCH
+PATCH {{server}}/odata/v4/catlogservice/Orders/14382863
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 14382863,
+  "item": "item-14382863",
+  "qty": 57
+}
+
+
+### Orders
+# @name Orders_DELETE
+DELETE {{server}}/odata/v4/catlogservice/Orders/14382863
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
